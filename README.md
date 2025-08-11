@@ -1,6 +1,6 @@
 # ✍️ Gerador de Bio para LinkedIn
 
-![badge-completo](https://img.shields.io/badge/Status-Concluído-brightgreen)
+![badge-em-construcao](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
 ![badge-tecnologias](https://img.shields.io/badge/Tecnologias-React%2C%20Node%2C%20OpenAI%20API-blue)
 ![badge-licença](https://img.shields.io/badge/Licença-MIT-lightgrey)
 
