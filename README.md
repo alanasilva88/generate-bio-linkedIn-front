@@ -45,7 +45,7 @@ Certifique-se de ter o [Node.js](https://nodejs.org/en/download/) e o [npm](http
     ```bash
     git clone https://github.com/alanasilva88/generate-bio-linkedIn-front.git
     ```
-2.  Navegue até a pasta do front-end (`/generate-bio` ou o nome que você deu):
+2.  Navegue até a pasta do front-end (`/generate-bio`):
     ```bash
     cd generate-bio
     ```
@@ -58,6 +58,16 @@ Certifique-se de ter o [Node.js](https://nodejs.org/en/download/) e o [npm](http
     npm run dev
     ```
     O front-end estará disponível em `http://localhost:5173`.
+
+## 🚧 Status e Próximos Passos
+
+O projeto está atualmente em desenvolvimento e as seguintes funcionalidades estão planejadas:
+
+-   [ ] **Melhorar a Interface:** Adicionar mais estilização e responsividade para diferentes tamanhos de tela.
+-   [ ] **Campos Adicionais:** Incluir opções para o usuário especificar o "tom" da bio (ex: formal, criativo) e outras informações relevantes.
+-   [ ] **Botão de Copiar:** Adicionar uma funcionalidade para copiar a bio gerada para a área de transferência com um único clique.
+-   [ ] **Tratamento de Erros:** Exibir mensagens de erro mais amigáveis para o usuário em caso de falha na API.
+-   [ ] **Deploy:** Publicar o front-end e o back-end em serviços de hospedagem (Vercel, Railway, etc.) para que a aplicação fique acessível publicamente.
 
 ## 🤝 Contato
 
