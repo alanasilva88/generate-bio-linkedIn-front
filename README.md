@@ -1,77 +1,95 @@
 # ✍️ Gerador de Bio para LinkedIn
 
-![badge-em-construcao](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
-![badge-tecnologias](https://img.shields.io/badge/Tecnologias-React%2C%20Node%2C%20OpenAI%20API-blue)
-![badge-licença](https://img.shields.io/badge/Licença-MIT-lightgrey)
-
-Uma aplicação Full Stack para gerar bios profissionais e personalizadas para o LinkedIn usando Inteligência Artificial.
+Uma aplicação Full Stack para gerar bios profissionais e personalizadas para o LinkedIn usando **Inteligência Artificial**.
 
 ## 🚀 Sobre o Projeto
 
-Este projeto foi desenvolvido com o objetivo de demonstrar habilidades em desenvolvimento Full Stack, integração com APIs de IA e boas práticas de desenvolvimento. A aplicação permite que o usuário insira sua profissão e experiência, e em poucos segundos, recebe uma bio profissional e otimizada para seu perfil no LinkedIn, gerada por um modelo de linguagem avançado.
+Este projeto demonstra habilidades sólidas em **Desenvolvimento Full Stack** e **Integração de APIs de IA**. A aplicação permite que o usuário insira sua profissão, experiência e defina o tom/foco, gerando uma bio profissional e otimizada para o LinkedIn, utilizando um modelo de linguagem avançado da OpenAI.
 
 ### ✨ Principais Funcionalidades
 
--   **Interface Intuitiva:** Formulário simples e direto ao ponto para coletar informações do usuário.
--   **Integração com IA:** Utiliza a API da OpenAI para gerar conteúdo de alta qualidade em tempo real.
--   **Arquitetura Full Stack:** Demonstra a separação clara entre a camada de front-end (React) e a de back-end (Node.js).
--   **Segurança:** A chave de API da OpenAI é mantida de forma segura no lado do servidor, protegendo informações sensíveis.
+  - **Interface Intuitiva & Customizável:** Design simples com opções para definir **Tom** (Formal, Criativo, etc.) e **Foco** (Liderança, Resultados, etc.).
+  - **Integração com IA (OpenAI):** Utiliza a API da OpenAI para gerar conteúdo de alta qualidade e conciso (máximo 3 frases) em tempo real.
+  - **Arquitetura Full Stack:** Separação clara entre a camada de apresentação (React) e a API de serviços (Node.js/Express).
+  - **Segurança:** A chave de API da OpenAI é mantida **exclusivamente no lado do servidor** (via `.env`), protegendo credenciais sensíveis.
+  - **Usabilidade:** Botão de **Copiar para a Área de Transferência** com feedback visual (`Copiado!`).
+  - **Robustez:** **Tratamento de Erros** detalhado no Back-end e exibição de mensagens amigáveis no Front-end (ex: erro 403 de limite de uso).
+
+-----
 
 ## 💻 Tecnologias Utilizadas
 
--   **Front-end:**
-    -   [React](https://reactjs.org/): Biblioteca JavaScript para construção da interface de usuário.
-    -   [Vite](https://vitejs.dev/): Ferramenta de build rápida para o desenvolvimento.
-    -   HTML, CSS, JavaScript.
+| Categoria | Tecnologia | Uso Principal |
+| :--- | :--- | :--- |
+| **Front-end** | **[React](https://reactjs.org/)** | Construção da interface de usuário e gestão de estado. |
+| | **[Vite](https://vitejs.dev/)** | Ferramenta de build rápida. |
+| **Back-end** | **[Node.js](https://nodejs.org/) / [Express.js](https://expressjs.com/)** | Ambiente de execução e Framework para criação da API REST. |
+| | **[OpenAI SDK](https://www.npmjs.com/package/openai)** | Interação oficial e otimizada com o serviço de IA. |
+| **Infra/Dev** | **[dotenv](https://www.npmjs.com/package/dotenv)** | Gerenciamento seguro de variáveis de ambiente. |
+| | **[cors](https://www.npmjs.com/package/cors)** | Configuração de segurança para requisições entre o Front e o Back-end. |
 
--   **Back-end:**
-    -   [Node.js](https://nodejs.org/): Ambiente de execução JavaScript.
-    -   [Express.js](https://expressjs.com/): Framework web para criar o servidor.
-    -   [dotenv](https://www.npmjs.com/package/dotenv): Para gerenciar variáveis de ambiente.
-    -   [cors](https://www.npmjs.com/package/cors): Para permitir requisições do front-end.
-    -   [OpenAI SDK](https://www.npmjs.com/package/openai): Para interagir com a API da OpenAI.
+-----
 
-## 🛠️ Como Executar o Projeto
+## 🛠️ Como Executar o Projeto (Full Stack)
 
-Para rodar este projeto em sua máquina local, siga os passos abaixo.
+Para rodar o Back-end e o Front-end em sua máquina local, você deve iniciar os dois projetos separadamente.
 
 ### Pré-requisitos
 
 Certifique-se de ter o [Node.js](https://nodejs.org/en/download/) e o [npm](https://www.npmjs.com/) instalados.
 
-### 1. Configurar o Front-end
+### 1\. Configurar e Iniciar o Back-end (API)
 
-1.  Clone este repositório:
+1.  Clone o repositório do Back-end:
     ```bash
-    git clone https://github.com/alanasilva88/generate-bio-linkedIn-front.git
+    git clone https://github.com/alanasilva88/generate-bio-linkedIn-back.git
+    cd generate-bio-linkedIn-back
     ```
-2.  Navegue até a pasta do front-end (`/generate-bio`):
-    ```bash
-    cd generate-bio
-    ```
-3.  Instale as dependências:
+2.  Instale as dependências:
     ```bash
     npm install
     ```
-4.  Inicie o servidor de desenvolvimento do React:
+3.  Crie um arquivo `.env` na raiz do Back-end com sua chave da API da OpenAI:
+    ```
+    OPENAI_API_KEY="sua_chave_secreta_aqui"
+    OPENAI_MODEL="gpt-4o-mini" # Sugerido para baixo custo e bons resultados
+    ```
+4.  Inicie o servidor da API:
+    ```bash
+    node server.js
+    # O servidor estará rodando em http://localhost:3000.
+    ```
+
+### 2\. Configurar e Iniciar o Front-end (Interface)
+
+1.  Mantenha o Back-end rodando e, em uma nova aba do terminal, clone o repositório do Front-end:
+    ```bash
+    git clone https://github.com/alanasilva88/generate-bio-linkedIn-front.git
+    cd generate-bio-linkedIn-front
+    ```
+2.  Instale as dependências:
+    ```bash
+    npm install
+    ```
+3.  Inicie o servidor de desenvolvimento do React:
     ```bash
     npm run dev
+    # O front-end estará disponível em http://localhost:5173.
     ```
-    O front-end estará disponível em `http://localhost:5173`.
+
+-----
 
 ## 🚧 Status e Próximos Passos
 
-O projeto está atualmente em desenvolvimento e as seguintes funcionalidades estão planejadas:
+O projeto está em desenvolvimento ativo. Aqui estão as próximas funcionalidades planejadas:
 
--   [ ] **Melhorar a Interface:** Adicionar mais estilização e responsividade para diferentes tamanhos de tela.
--   [ ] **Campos Adicionais:** Incluir opções para o usuário especificar o "tom" da bio (ex: formal, criativo) e outras informações relevantes.
--   [ ] **Botão de Copiar:** Adicionar uma funcionalidade para copiar a bio gerada para a área de transferência com um único clique.
--   [ ] **Tratamento de Erros:** Exibir mensagens de erro mais amigáveis para o usuário em caso de falha na API.
--   [ ] **Deploy:** Publicar o front-end e o back-end em serviços de hospedagem (Vercel, Railway, etc.) para que a aplicação fique acessível publicamente.
+  - [ ] **Melhorar a Interface:** Adicionar mais estilização e responsividade para diferentes tamanhos de tela.
+  - [ ] **Deploy:** Publicar o front-end e o back-end em serviços de hospedagem (Vercel, Railway, etc.) para que a aplicação fique acessível publicamente.
+
+-----
 
 ## 🤝 Contato
 
-Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato.
+Se você tiver alguma dúvida, sugestão ou quiser se conectar, sinta-se à vontade para entrar em contato.
 
----
-_Desenvolvido com 💜 por Alana Silva_
+*Desenvolvido com 💜 por [Alana Silva](Seu link do LinkedIn aqui)*
