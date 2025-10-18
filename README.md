@@ -92,4 +92,4 @@ O projeto está em desenvolvimento ativo. Aqui estão as próximas funcionalidad
 
 Se você tiver alguma dúvida, sugestão ou quiser se conectar, sinta-se à vontade para entrar em contato.
 
-*Desenvolvido com 💜 por [Alana Silva](Seu link do LinkedIn aqui)*
+*Desenvolvido com 💜 por [Alana Silva](https://www.linkedin.com/in/alana-soares-silva)*
