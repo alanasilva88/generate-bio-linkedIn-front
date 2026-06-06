@@ -16,7 +16,7 @@ const FOCUS_OPTIONS = [
 ];
 
 const MAX_EXPERIENCIA_LENGTH = 1000;
-const API_URL = 'https://generate-bio-linkedin-back-1.onrender.com';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/generate-bio';
 
 function App() {
     const [formData, setFormData] = useState({
