@@ -84,8 +84,7 @@ Certifique-se de ter o [Node.js](https://nodejs.org/en/download/) e o [npm](http
 O projeto está em desenvolvimento ativo. Aqui estão as próximas funcionalidades planejadas:
 
   - [ ] **Melhorar a Interface:** Adicionar mais estilização e responsividade para diferentes tamanhos de tela.
-  - [ ] **Deploy:** Publicar o front-end e o back-end em serviços de hospedagem (Vercel, Railway, etc.) para que a aplicação fique acessível publicamente.
-
+  
 -----
 
 ## 🤝 Contato
